@@ -159,7 +159,7 @@ void KeyboardView::paint (Graphics& g)
     auto isBlack = [] (int n) { const int p = n % 12; return p == 1 || p == 3 || p == 6 || p == 8 || p == 10; };
     auto sounding = [this] (int n, bool bass)
     {
-        const auto& arr = bass ? proc.soundingBass : proc.soundingChord;
+        const std::atomic<uint64_t>* arr = bass ? proc.soundingBass : proc.soundingChord;
         return ((arr[n >> 6].load() >> (n & 63)) & 1) != 0;
     };
 

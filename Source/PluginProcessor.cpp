@@ -229,7 +229,7 @@ void SoulChordProcessor::rebuildIfNeeded (bool force)
 //==============================================================================
 void SoulChordProcessor::setSounding (int ch, int note, bool on)
 {
-    auto& arr = ch == 0 ? soundingChord : soundingBass;
+    std::atomic<uint64_t>* arr = (ch == 0) ? soundingChord : soundingBass;
     const uint64_t bit = (uint64_t) 1 << (note & 63);
     if (on) arr[note >> 6].fetch_or (bit);
     else arr[note >> 6].fetch_and (~bit);
