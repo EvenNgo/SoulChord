@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: SoulChord-Windows
-          path: SoulChord-Windows.zip
+          path: dist/
 
       - name: Upload pluginval log
         if: always()

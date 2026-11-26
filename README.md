@@ -5,7 +5,7 @@ Plugin VST3 tạo vòng hòa âm cho **Pop, R&B và Hip hop**, dùng được tr
 ## Cài đặt vào FL Studio
 
 1. Vào tab **Actions** của repo, mở lần build mới nhất có dấu ✓ xanh, kéo xuống mục **Artifacts** và tải **SoulChord-Windows** (hoặc tải ở mục **Releases** nếu đã có bản phát hành).
-2. Giải nén. Bên trong có thư mục `SoulChord.vst3` (plugin) và `SoulChord.exe` (bản chạy độc lập để test nhanh).
+2. Giải nén (chỉ một lần). Bên trong có thư mục `SoulChord.vst3` (plugin) và `SoulChord.exe` (bản chạy độc lập để test nhanh).
 3. Copy **cả thư mục** `SoulChord.vst3` vào `C:\Program Files\Common Files\VST3\`.
 4. Mở FL Studio, vào **Options → Manage plugins**, bấm **Find installed plugins** (hoặc *Start scan*), tìm `SoulChord` rồi tick ngôi sao để thêm vào danh sách.
 5. Thêm vào Channel Rack: bấm **+**, chọn **SoulChord**.
