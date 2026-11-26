@@ -1,0 +1,5 @@
+build/
+.vscode/
+.vs/
+*.user
+tests/theory_test
