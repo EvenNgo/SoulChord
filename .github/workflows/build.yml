@@ -14,7 +14,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Theory unit tests
         run: |
           g++ -std=c++17 -O1 -ISource tests/theory_test.cpp Source/Theory.cpp Source/Arranger.cpp -o theory_test
@@ -24,7 +24,7 @@ jobs:
     needs: tests
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Cache JUCE download
         uses: actions/cache@v4
@@ -33,7 +33,7 @@ jobs:
           key: juce-8.0.9-${{ runner.os }}
 
       - name: Configure
-        run: cmake -B build -G "Visual Studio 17 2022" -A x64
+        run: cmake -B build -A x64
 
       - name: Build
         run: cmake --build build --config Release --target SoulChord_VST3 SoulChord_Standalone --parallel
